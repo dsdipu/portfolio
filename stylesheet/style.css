@@ -263,7 +263,7 @@ div {
 .aboutimage{
     width: 70%;
     height: 700px;
-    background-image: url("/Images/web\ cartoon.png");
+    background-image: url("Images/web\ cartoon.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
