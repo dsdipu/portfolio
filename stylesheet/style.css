@@ -583,7 +583,7 @@ div {
     padding: 50px 250px;
     text-align: center;
     height: 100vh;
-    background-image: url("/Images/Awards/backgroundimageforawardssection.jpg");
+    background-image: url("../Images/Awards/backgroundimageforawardssection.jpg");
     background-size: cover;
     background-blend-mode: overlay;
 }
@@ -647,7 +647,7 @@ div {
 
 /* Certifications section starts */
 .certifications{
-    background-image: url("/Images/Certificates/w14.jpg");
+    background-image: url("../Images/Certificates/w14.jpg");
     background-size: cover;
     background-color: #22222292;
     background-blend-mode: overlay;
