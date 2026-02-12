@@ -8,9 +8,6 @@ div {
     scroll-margin-top: 80px; /* ensures smooth scroll with offset */
 }
 
-/* =========================
-   Global Reset & Base Style
-   ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -21,37 +18,36 @@ div {
     color: white;
 }
 
-/* =========================
-   Navigation Bar (Desktop)
-   ========================= */
+/* Navigation bar starts */
 .navbar {
-    position: fixed; /* makes it stick on top */
+    position: fixed; 
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* ensures it stays above other content */
-    background-color: rgba(255, 255, 255, 0.95); /* slightly opaque for readability */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow for separation */
+    z-index: 1000; 
+    background-color: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     height: 70px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 100px;
     font-size: 14px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-/* Logo */
 .navlogo {
-    width: 20%;
+    width: 10%;
 }
 
 .navlogo img {
     width: 60px;
 }
 
-/* Navigation Menu */
 .navmenu {
-    width: 70%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
 }
 
 .navmenu a {
@@ -66,8 +62,12 @@ div {
 .navmenu a:hover {
     color: #00AEEF;
 }
+.navcontact{
+    width: 15%;
+    display: flex;
+    justify-content: end;
+}
 
-/* Contact Button */
 .navcontact a {
     background-color: #00AEEF;
     padding: 10px 20px;
@@ -84,82 +84,6 @@ div {
     color: #00AEEF;
 }
 
-/* =========================
-   Tablet View (≤ 1024px)
-   ========================= */
-@media (max-width: 1024px) {
-    .navbar {
-        padding: 0 40px;
-        font-size: 13px;
-    }
-
-    .navlogo {
-        width: 15%;
-    }
-
-    .navmenu {
-        width: 75%;
-    }
-
-    .navmenu a {
-        margin-right: 20px;
-    }
-}
-
-/* =========================
-   Mobile View (≤ 768px)
-   Layout stacks vertically
-   ========================= */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        height: auto;
-        padding: 15px 20px;
-        gap: 15px;
-    }
-
-    .navlogo {
-        width: 100%;
-        text-align: center;
-    }
-
-    .navmenu {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 10px;
-    }
-
-    .navmenu a {
-        margin-right: 20px;
-        font-size: 13px;
-    }
-
-    .navcontact {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
-}
-
-/* =========================
-   Small Mobile (≤ 480px)
-   ========================= */
-@media (max-width: 480px) {
-    .navmenu a {
-        margin-right: 12px;
-        font-size: 12px;
-    }
-
-    .navcontact a {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-}
-
-
-
 /* Hero section starts */
 .hero{
     height: 650px;
@@ -168,7 +92,6 @@ div {
     align-items: center;
     align-content: center;
     padding: 0 100px;
-    /*border-bottom: 1px solid rgba(255, 255, 255, 0.1);*/
 }
 .heroimage{
     width: 40%;
@@ -253,8 +176,6 @@ div {
     align-content: center;
     background-color: black;
     padding: 0 100px;
-    /* font-family: "Quicksand", sans-serif; */
-
 }
 
 .abouttext{
@@ -353,7 +274,7 @@ div {
 .projects{
     background-color: black;
     height: 900px;
-    padding: 100px;
+    padding: 50px 100px;
 }
 .projectrow1{
     display: flex;
@@ -497,7 +418,7 @@ div {
 
 .skills {
     padding: 50px 10%;
-    background-color: #111827; /* Dark background matches your image */
+    background-color: #111827; 
     color: white;
     text-align: center;
 }
@@ -579,27 +500,7 @@ div {
 /* Skills section ends  */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Activities section starts */
 
 .activities{
     background-color: hsl(216, 100%, 4%);
@@ -673,3 +574,126 @@ div {
 
     100% { transform: translateX(0); }
 }
+/* Actitivities section ends */
+
+
+/* Awards Section Starts */
+.awards{
+    background-color: #222;
+    padding: 50px 250px;
+    text-align: center;
+    height: 100vh;
+    background-image: url("/Images/Awards/backgroundimageforawardssection.jpg");
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+.awards h1{
+    margin-bottom: 50px;
+}
+
+.imagegallery{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 8px;
+}
+.box{
+    background-size: cover;
+    background-position: top center;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-color: #222;
+    background-blend-mode: overlay;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid white;
+    border-radius: 0px;
+    box-shadow: 0px 0px 5px 1px darkgray;
+}
+.box:hover{
+    background-color: transparent;
+    background-position: center center;
+    border: 2px solid white;
+    border-radius: 10px;
+    h3{
+        background-color: #0080ae;
+        transition: all 0.5s ease-in-out;
+        border-radius: 5px 5px 0 0;
+        padding: 5px 10px;
+    }
+}
+.col2{
+    grid-column: span 2;
+}
+.col3{
+    grid-column: span 3;
+}
+.col6{
+    grid-column: span 6;
+}
+.row2{
+    grid-row: span 2;
+}
+.row3{
+    grid-row: span 3;
+}
+.row6{
+    grid-row: span 6;
+}
+/* Awards section ends */
+
+
+
+/* Certifications section starts */
+.certifications{
+    background-image: url("/Images/Certificates/w14.jpg");
+    background-size: cover;
+    background-color: #22222292;
+    background-blend-mode: overlay;
+    height: 145vh;
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.certifications h1{
+    margin-bottom: 50px;
+}
+
+.showcase{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    width: 100%;
+    gap: 10px 5px;
+}
+.certificate{
+    background-color: #131a2a;
+    padding: 8px 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 1px inset rgba(18, 92, 124, 0.51);
+}
+.certificate:hover{
+    img{
+        transform: scale(1.8);
+        transition-duration: 1s;
+    }
+    
+}
+.certificate img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.certificate h3{
+    color: #007bff;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.certificate p{
+    color: grey;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Certifications section ends */
