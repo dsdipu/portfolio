@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dipankar Sarkar</title>
+    <title>Dipankar Sarkar | Portfolio</title>
+    <link rel="icon" type="image/png" href="Images/Logo/favicon/DS.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -23,7 +24,7 @@
 
             <div class="navmenu">
                 <a href="#home">Home</a>
-                <a href="#about">About me</a>
+                <a href="#about">About</a>
                 <a href="#education">Education</a>
                 <a href="#projects">Projects</a>
                 <a href="#skills">Skills</a>
@@ -53,8 +54,8 @@
                 <h1>Hi, I'm <br> <span class="name">Dipankar Sarkar</span> </h1>
                 <p class="herotag">Engineering Student <span>|</span> Problem Solver <span>|</span> Self Learner</p>
                 <p>I am an undergraduate <b>Software Engineering</b> student at <b>Green University of Bangladesh</b> with a strong academic record and demonstrated leadership in technical and educational initiatives.</p>
-                <button class="btn1">View Projects</button>
-                <button class="btn2">Download resume</button>
+                <button class="btn1"><a href="#projects">View Projects</a></button>
+                <button class="btn2"><a href="Pages/CV/CV.html" target="_blank">View Resume</a></button>
             </div>
         </div>
         <!-- Hero section ends -->
@@ -104,34 +105,32 @@
 
 
         <!-- Projects section starts -->
-         <div class="projects" id="projects">
+        <div class="projects" id="projects">
             <h1>Projects</h1>
-            <div class="allprojects">
-                <div class="projectrow1">
-                    <div class="projectcolumn1">
-                        <div class="img">
-
-                        </div>
-                        <h2>Bangla Bhojon - restuarant management system</h2>
-                        <p>Bangla Bhojon is a Java-based desktop restaurant management system designed to manage restaurant operations including order handling and billing. This project demonstrates a simple real-world desktop application with GUI and workflow management.</p>
-                        <div class="projectlanguage">
+            <div class="project-container">
+                <div class="project-card">
+                    <div class="project-img img1"></div>
+                    <div class="project-info">
+                        <h2>Bangla Bhojon - Restaurant Management System</h2>
+                        <p>Bangla Bhojon is a Java-based desktop restaurant management system designed to manage restaurant operations including order handling and billing.</p>
+                        <div class="project-tags">
                             <span>Java</span><span>Swing</span><span>Netbeans IDE</span>
                         </div> 
-                        <div class="projectshow">
+                        <div class="project-link">
                             <a href="https://github.com/dsdipu/bangla-bhojon" target="_blank">View Code</a>
                         </div>
                     </div>
+                </div>
 
-                    <div class="projectcolumn2">
-                        <div class="img">
-
-                        </div>
+                <div class="project-card">
+                    <div class="project-img img2"></div>
+                    <div class="project-info">
                         <h2>Personal Academic Portfolio Website</h2>
-                        <p>A responsive personal portfolio website developed using pure HTML and CSS to present academic background, technical skills, projects, leadership roles, and achievements in a clean and structured layout.</p>
-                        <div class="projectlanguage">
+                        <p>A responsive personal portfolio website developed using pure HTML and CSS to present academic background, technical skills, and achievements.</p>
+                        <div class="project-tags">
                             <span>HTML</span><span>CSS</span>
                         </div> 
-                        <div class="projectshow">
+                        <div class="project-link">
                             <a href="https://github.com/dsdipu/portfolio" target="_blank">View Code</a>
                         </div>
                     </div>
@@ -380,7 +379,7 @@
     </main>
 
     <!-- Footer starts -->
-     <footer>
+    <footer>
         <div class="contactme" id="contact">
             <div class="contactdetails">
                 <h2>Get In Touch With Me Now!</h2>
@@ -419,7 +418,7 @@
             </div>
         </div>
      </footer>
-     <!-- Footer section ends -->
+    <!-- Footer section ends -->
 
     
 

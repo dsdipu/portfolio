@@ -1,20 +1,13 @@
+/* ####### UNIVERSAL STYLE ######## */
 html {
     scroll-behavior: smooth;
 }
 body {
-    padding-top: 70px; /* same as navbar height */
+    padding-top: 70px; 
 }
 div {
-    scroll-margin-top: 80px; /* ensures smooth scroll with offset */
+    scroll-margin-top: 80px; 
 }
-/* Bottom to Top Scrolling Button Starts */
-.bottomtotop .fa-solid{
-    position: fixed;
-    right: 20px;
-    bottom: 10px;
-    color: crimson;
-}
-/* Bottom to Top Scrolling Button ends */
 * {
     margin: 0;
     padding: 0;
@@ -24,8 +17,22 @@ div {
     text-decoration: none;
     color: white;
 }
+/* ####### UNIVERSAL STYLE ######## */
 
-/* Navigation bar starts */
+
+/* ########## Bottom to Top Scrolling Button Starts ########## */
+.bottomtotop .fa-solid{
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    color: crimson;
+}
+/* ########## Bottom to Top Scrolling Button ends  ########## */
+
+
+/* ########## NAVBAR START (Optimized for your Specific Widths) ########## */
+
+/* --- Default Style (Desktop / 1440px and above) --- */
 .navbar {
     position: fixed; 
     top: 0;
@@ -34,7 +41,7 @@ div {
     z-index: 1000; 
     background-color: rgba(255, 255, 255, 0.95); 
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-    height: 70px;
+    height: 70px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -43,766 +50,1190 @@ div {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
-.navlogo {
-    width: 10%;
-}
-
-.navlogo img {
-    width: 60px;
-}
+.navlogo { width: 15%; }
+.navlogo img { width: 60px; }
 
 .navmenu {
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: center;
 }
 
 .navmenu a {
-    margin-right: 40px;
-    color: #1D2734;
-    border: 1px solid transparent;
-    border-radius: 5px;
+    margin: 0 20px;
+    color: #1D2734; 
     font-weight: bold;
     transition: color 0.5s;
 }
 
-.navmenu a:hover {
-    color: #00AEEF;
-}
-.navcontact{
-    width: 15%;
-    display: flex;
-    justify-content: end;
-}
+.navmenu a:hover { color: #00AEEF; }
 
+.navcontact { width: 15%; display: flex; justify-content: flex-end; }
 .navcontact a {
     background-color: #00AEEF;
     padding: 10px 20px;
     color: #1a1a1d;
-    border: 1px solid transparent;
     border-radius: 5px;
     font-weight: bold;
-    transition: all 0.5s;
+    border: 1px solid transparent;
 }
 
-.navcontact a:hover {
-    background-color: transparent;
-    border: 1px solid #00AEEF;
-    color: #00AEEF;
+/* --- Responsive Breakpoints based on your widths --- */
+
+/* 1. Large Screen / Standard Desktop (1440px and below) */
+@media (max-width: 1440px) {
+    .navbar { padding: 0 80px; }
 }
 
-/* Hero section starts */
-.hero{
-    height: 650px;
+/* 2. Small Laptops / Tablets Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    .navbar { padding: 0 40px; }
+    .navmenu { width: 65%; }
+    .navmenu a { margin: 0 15px; font-size: 13px; }
+    .navlogo { width: 10%; }
+}
+
+/* 3. Tablets Portrait (768px and below) */
+@media (max-width: 768px) {
+    .navbar { 
+        padding: 0 20px; 
+        height: 80px; /* Ektu height barano holo jate space pay */
+    }
+    .navlogo img { width: 50px; }
+    .navmenu a { margin: 0 8px; font-size: 12px; }
+    .navcontact a { padding: 8px 12px; font-size: 12px; }
+}
+
+/* 4. Mobile Devices (420px and below) */
+@media (max-width: 425px) {
+    .navbar {
+        height: auto;
+        flex-direction: column; /* Niche niche layout */
+        padding: 15px 10px;
+        gap: 12px;
+    }
+
+    .navlogo, .navmenu, .navcontact {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .navmenu {
+        flex-wrap: wrap; /* Item beshi hole auto line break korbe */
+        gap: 8px;
+    }
+
+    .navmenu a {
+        margin: 5px;
+        font-size: 13px;
+        display: inline-block;
+    }
+
+    .navcontact a {
+        display: block;
+        width: 90%; /* Center-e thakar jonno */
+        margin: 0 auto;
+    }
+}
+
+/* ########## NAVBAR END ########## */
+
+/* ########## HERO SECTION START (Optimized for 1440, 1024, 768, 420) ########## */
+
+/* --- Default Style (Desktop / 1440px and above) --- */
+.hero {
+    height: 100vh;
     background-color: black;
     display: flex;
     align-items: center;
-    align-content: center;
     padding: 0 100px;
+    overflow: hidden;
 }
-.heroimage{
-    width: 40%;
-}
-.herocontent{
-    width: 60%;
-}
-.heroimage img{
+
+.heroimage { width: 40%; text-align: center; }
+.herocontent { width: 60%; }
+
+.heroimage img {
     width: 350px;
     height: 350px;
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-    border: grey 1rem solid;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 75% 85%, 75% 100%, 64% 89%, 2% 89%);
+    border: #001d3d 1rem solid;
+    object-fit: cover;
 }
 
-.herocontent h1{
-    font-size: 4.4rem;
-}
-.name{
-    color: #00AEEF;
-    font-weight: 900;
-    text-transform: uppercase;
-}
-.herotag{
-    font-size: 1.4rem;
-    font-weight: bold;
-    line-height: 3rem;
-}
-.herotag span{
-    color: #00AEEF;
-    margin: auto 1rem;
-}
-.herocontent .btn1{
+.herocontent h1 { font-size: 4.4rem; color: white; }
+.name { color: #00AEEF; font-weight: 900; text-transform: uppercase; }
+
+.herotag { font-size: 1.4rem; font-weight: bold; line-height: 3rem; color: white; }
+.herotag span { color: #00AEEF; margin: 0 1rem; }
+
+/* Buttons Base */
+.herocontent .btn1, .herocontent .btn2 {
+    display: inline-block;
     font-size: 1.1rem;
     font-weight: bold;
     margin-top: 20px;
-    background-color:#00AEEF;
     padding: 0.7rem 1.2rem;
-    border: white 0.1rem solid;
     border-radius: 0.3rem;
-    color: #1D2734;;
+    transition: all 0.5s;
+    cursor: pointer;
 }
-.herocontent .btn1:hover{
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 20px;
-    background-color:#0080ae;
-    padding: 0.7rem 1.2rem;
-    border: transparent 0.1rem solid;
-    border-radius: 0.3rem;
-    color: white;
-    transition-duration: 0.5s;
+
+.herocontent .btn1 { background-color: #00AEEF; border: white 0.1rem solid; color: #1D2734; }
+.herocontent .btn2 { background-color: transparent; border: white 0.1rem solid; color: white; margin-left: 2rem; }
+
+/* --- Responsive Breakpoints --- */
+
+/* 1. Large Desktops (1440px and below) */
+@media (max-width: 1440px) {
+    .hero { padding: 0 80px; }
+    .herocontent h1 { font-size: 4rem; }
 }
-.herocontent .btn2{
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 20px;
-    background-color:transparent;
-    padding: 0.7rem 1.2rem;
-    border: white 0.1rem solid;
-    border-radius: 0.3rem;
-    color: white;
-    margin-left: 2rem;
+
+/* 2. Small Laptops / Tablets Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    .hero { padding: 0 40px; }
+    .herocontent h1 { font-size: 3.5rem; }
+    .heroimage img { width: 300px; height: 300px; }
 }
-.herocontent .btn2:hover{
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 20px;
-    background-color:#00AEEF;
-    padding: 0.7rem 1.2rem;
-    border: white 0.1rem solid;
-    border-radius: 0.3rem;
-    color: #1D2734;
-    transition-duration: 0.5s;
+
+/* 3. Tablets Portrait (768px and below) */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Content niche niche chole ashbe */
+        justify-content: center;
+        text-align: center;
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 30px 50px 30px; /* Navbar er space rakha hoyeche */
+    }
+
+    .heroimage, .herocontent { width: 100%; }
+    .heroimage { margin-bottom: 40px; }
+    .heroimage img { width: 280px; height: 280px; }
+
+    .herocontent h1 { font-size: 2.8rem; line-height: 1.2; }
+    .herotag { font-size: 1.2rem; line-height: 2.5rem; }
+    
+    .herocontent .btn2 { margin-left: 1rem; } /* Mobile er age margin adjust */
 }
-/* Hero section ends */
+
+/* 4. Mobile Devices (420px and below) */
+@media (max-width: 420px) {
+    .hero {
+        padding: 120px 15px 40px 15px;
+    }
+
+    .heroimage img {
+        width: 220px;
+        height: 220px;
+        border-width: 0.6rem;
+    }
+
+    .herocontent h1 { font-size: 2.2rem; }
+    
+    .herotag { font-size: 1rem; line-height: 1.8rem; }
+    .herotag span { display: block; margin: 5px 0; } /* Text kete na jaoar jonno */
+
+    .herocontent .btn1, .herocontent .btn2 {
+        display: block; /* Buttons ektar niche arekta */
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+/* ########## HERO SECTION END ########## */
 
 
-/* About me section starts */
-.about{
+/* ########## ABOUT SECTION START (Optimized for 1440, 1024, 768, 420) ########## */
+
+/* --- Default Style (Desktop / 1440px and above) --- */
+.about {
     display: flex;
     align-items: center;
-    align-content: center;
     background-color: black;
     padding: 0 100px;
+    min-height: 80vh; /* Content er upor base kore height nibe */
 }
 
-.abouttext{
-    width: 30%;
+.abouttext {
+    width: 40%; /* 30% theke ektu baralam jate text guchano thake */
 }
-.aboutimage{
-    width: 70%;
-    height: 700px;
+
+.aboutimage {
+    width: 60%;
+    height: 600px; /* Standard desktop height */
     background-image: url("../Images/AboutSection/web\ cartoon.png");
-    background-size: cover;
+    background-size: contain; /* Image jeno kete na jay tai contain use kora best */
+    background-position: center;
     background-repeat: no-repeat;
 }
-.abouttext h1{
+
+.abouttext h1 {
     font-family: "Quicksand", sans-serif;
     font-weight: 300;
     font-size: 5rem;
     color: #00AEEF;
-    line-height: 2rem;
+    line-height: 4rem; /* 2rem ekhane ektu gajagaji lagte pare tai baralam */
 }
-.abouttext h2{
+
+.abouttext h2 {
     font-family: "Quicksand", sans-serif;
     font-weight: 900;
     font-size: 4rem;
     color: #00AEEF;
 }
-.abouttext p{
+
+.abouttext p {
     color: white;
+    margin-top: 15px;
+    line-height: 1.6;
 }
-.fa-brands{
-    font-size: 1.2rem;
-    margin-top: 1rem;
+
+.fa-brands {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
     margin-right: 20px;
     color: #00AEEF;
+    display: inline-block;
+    transition: all 0.5s;
 }
-.fa-brands:hover{
+
+.fa-brands:hover {
     color: white;
-    transition-duration: 0.5s;
     transform: translateY(-5px);
 }
-/* About me section ends */
+
+/* --- Responsive Breakpoints --- */
+
+/* 1. Large Desktops (1440px and below) */
+@media (max-width: 1440px) {
+    .about { padding: 0 80px; }
+    .abouttext h1 { font-size: 4rem; }
+    .abouttext h2 { font-size: 3.5rem; }
+}
+
+/* 2. Small Laptops / Tablets Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    .about { padding: 0 40px; }
+    .abouttext { width: 50%; }
+    .aboutimage { width: 50%; height: 500px; }
+    .abouttext h1 { font-size: 3.5rem; line-height: 3rem; }
+    .abouttext h2 { font-size: 3rem; }
+}
+
+/* 3. Tablets Portrait (768px and below) */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column-reverse; /* Text upore, Image niche */
+        padding: 60px 30px;
+        text-align: center;
+    }
+
+    .abouttext, .aboutimage { width: 100%; }
+
+    .aboutimage {
+        height: 400px; /* Choto screen-e image height komano holo */
+        margin-bottom: 30px;
+    }
+
+    .abouttext h1 { font-size: 3rem; line-height: 2.5rem; }
+    .abouttext h2 { font-size: 2.5rem; }
+}
+
+/* 4. Mobile Devices (420px and below) */
+@media (max-width: 420px) {
+    .about {
+        padding: 40px 15px;
+    }
+
+    .aboutimage {
+        height: 300px; /* Mobile screen-er jonno ektu choto image */
+    }
+
+    .abouttext h1 { font-size: 2.5rem; line-height: 2.2rem; }
+    .abouttext h2 { font-size: 2.2rem; }
+    
+    .abouttext p { font-size: 14px; }
+    
+    .fa-brands {
+        font-size: 1.2rem;
+        margin-right: 15px;
+    }
+}
+
+/* ########## ABOUT SECTION END ########## */
 
 
-/* Education section starts */
-.education{
+/* ########## EDUCATION SECTION START (Optimized for 1440, 1024, 768, 420) ########## */
+
+/* --- Default Style (Desktop / 1440px and above) --- */
+.education {
     height: fit-content;
     background-color: black;
-    display: felx;
-    align-items: center;
-    align-content: center;
+    display: block; /* 'felx' spelling thik kora hoyeche ar container e block thaka safe */
     padding: 50px 100px 150px 100px;
 }
-.education h1{
+
+.education h1 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 3rem;
+    color: white; /* Universal style onujayi */
 }
-.educationdetails{
+
+.educationdetails {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* Sob card jeno soman lomba thake */
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap; /* Jayga na hole card auto niche jabe */
 }
-.educationbox{
-    width: 25%;
+
+.educationbox {
+    width: 22%; /* Gap soho 4-ta card er jonno adjust kora */
     text-align: center;
-    padding: 50px 30px;
+    padding: 40px 20px;
     border-radius: 10px;
     border: 1px bisque solid;
     background-color: #060a19;
-    
+    transition: transform 0.3s ease;
 }
-.educationbox:hover{
-    .fa-solid{
-        color: orange;
-        transform: scale(1.5);
-        transition: all 0.5s ease-in-out;
-    }
+
+.educationbox:hover {
+    transform: translateY(-10px); /* Box ektu upore uthbe */
 }
-.educationbox .fa-solid{
-    color: bisque;
-}
-.educationbox h3{
+
+.educationbox:hover .fa-solid {
     color: orange;
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out;
 }
-.educationbox p{
+
+.educationbox .fa-solid {
+    color: bisque;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.educationbox h3 {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.educationbox p {
     color: bisque;
     line-height: 1.6rem;
+    font-size: 0.9rem;
 }
-/* Education ends */
+
+/* --- Responsive Breakpoints --- */
+
+/* 1. Large Desktops (1440px and below) */
+@media (max-width: 1440px) {
+    .education { padding: 50px 80px 100px 80px; }
+    .educationbox { width: 23%; }
+}
+
+/* 2. Small Laptops / Tablets Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    .education { padding: 50px 40px; }
+    .educationbox { 
+        width: 45%; /* Ekhane 2-ta kore card pasapasi thakbe */
+    }
+    .education h1 { font-size: 2.5rem; }
+}
+
+/* 3. Tablets Portrait (768px and below) */
+@media (max-width: 768px) {
+    .education { padding: 40px 30px; }
+    .educationdetails { gap: 20px; }
+    .educationbox { 
+        width: 47%; /* Tablet-e o 2-ta kore thakbe kintu padding ektu kom hobe */
+        padding: 30px 15px;
+    }
+    .education h1 { font-size: 2.2rem; margin-bottom: 2rem; }
+}
+
+/* 4. Mobile Devices (420px and below) */
+@media (max-width: 420px) {
+    .education { padding: 40px 15px; }
+    .educationbox { 
+        width: 100%; /* Mobile-e 1-ta kore card full width nibe */
+        padding: 30px 20px;
+    }
+    .education h1 { font-size: 1.8rem; }
+}
+
+/* ########## EDUCATION SECTION END ########## */
 
 
-/* Projects section starts */
-.projects{
+/* ########## PROJECTS SECTION START ########## */
+
+.projects {
     background-color: black;
-    height: 900px;
-    padding: 50px 100px;
+    padding: 80px 100px;
+    min-height: auto;
 }
-.projectrow1{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-}
-.projects h1{
+
+.projects h1 {
     text-align: center;
     color: white;
     font-size: 3rem;
     margin-bottom: 4rem;
 }
-.projectcolumn1{
-    width: 32%;
-    height: 550px;
-    background-color: #000814;
-    border-radius: 5px;
-    padding: 2%;
-    box-shadow: 0px 0px 10px 0px #0b131e;
+
+/* Container for all cards */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Jayga na hole niche jabe */
 }
-.projectcolumn1 .img{
-    background-image: url("../Images/Projects/Bangla\ bhojon.png");
-    background-size: cover;
-    background-position: center top;
+
+/* Common Card Style */
+.project-card {
+    background-color: #000814;
+    width: 30%; /* Standard Desktop width */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px -2px 3px #00AEEF;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Project Images */
+.project-img {
     height: 200px;
     width: 100%;
-    border-radius: 5px;
+    background-size: cover;
+    background-position: center top;
 }
-.projectcolumn1 h2{
-    margin-top: 1rem;
+
+.img1 { background-image: url("../Images/Projects/Bangla\ bhojon.png"); }
+.img2 { background-image: url("../Images/Projects/portfolio.png"); }
+
+/* Info Padding */
+.project-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-info h2 {
     color: #00AEEF;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
 }
-.projectcolumn1 p{
-    margin-top: 1rem;
-    font-size: 1rem;
-    line-height: 1.1rem;
+
+.project-info p {
     color: #fefae0;
+    font-size: 0.95rem;
+    line-height: 1.5;
     text-align: justify;
+    margin-bottom: 20px;
+    flex-grow: 1;
 }
-.projectlanguage {
-    margin: 1rem auto;
+
+/* Tags Styling */
+.project-tags {
+    margin-bottom: 20px;
 }
-.projectlanguage span{
+
+.project-tags span {
     background-color: #00AEEF;
-    margin-right: 1rem;
-    padding: 5px 10px;
+    color: black;
+    padding: 4px 12px;
     border-radius: 20px;
-    color:black;
+    font-size: 0.8rem;
     font-weight: bold;
-}
-.projectshow{
-    margin-top: 1rem;
+    margin-right: 8px;
+    display: inline-block;
+    margin-bottom: 8px;
 }
 
-.projectcolumn2{
-    width: 33%;
-    height: 550px;
-    background-color: #000814;
-    border-radius: 5px;
-    padding: 2%;
-    box-shadow: 0px 0px 10px 0px #0b131e;
-}
-.projectcolumn2 .img{
-    background-image: url("../Images/Projects/portfolio.png");
-    background-size: cover;
-    background-position: center top;
-    height: 200px;
-    width: 100%;
-    border-radius: 5px;
-}
-.projectcolumn2 h2{
-    margin-top: 1rem;
+/* View Code Link */
+.project-link a {
     color: #00AEEF;
-}
-.projectcolumn2 p{
-    margin-top: 1rem;
-    font-size: 1rem;
-    line-height: 1.1rem;
-    color: #fefae0;
-    text-align: justify;
-}
-/* Projects section ends */
-
-/* Skills section starts */
-.skills-container {
-  padding: 60px 20px;
-  background-color: #1e2738;
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
+    text-decoration: underline wavy;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
-.skills-inner {
-  max-width: 1000px;
-  margin: 0 auto;
+.project-link a:hover {
+    color: white;
 }
 
-.skills-container h2 {
-  font-size: 32px;
-  margin-bottom: 10px;
+/* --- Responsive Breakpoints --- */
+
+@media (max-width: 1440px) {
+    .projects { padding: 60px 80px; }
+    .project-card { width: 31%; }
 }
 
-.skills-container h3 {
-  font-size: 24px;
-  margin: 20px 0;
+@media (max-width: 1024px) {
+    .projects { padding: 50px 40px; }
+    .project-card { width: 45%; } /* Tablet-e 2-ta kore */
+    .projects h1 { font-size: 2.5rem; }
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+@media (max-width: 768px) {
+    .projects { padding: 50px 20px; }
+    .project-card { width: 80%; } /* Portrait Tablet-e 1-ta boro card */
 }
 
-.skill {
-  position: relative;
-  text-align: left;
-  background-color: #2a364d;
-  padding: 15px 20px;
-  border-radius: 10px;
+@media (max-width: 420px) {
+    .projects { padding: 40px 15px; }
+    .project-card { width: 100%; } /* Mobile-e full width */
+    .projects h1 { font-size: 2rem; margin-bottom: 2.5rem; }
+    .project-info h2 { font-size: 1.2rem; }
 }
 
-.skill-name {
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: block;
-}
 
-.skill-bar {
-  background-color: #3b4660;
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.skill-progress {
-  height: 100%;
-  border-radius: 5px;
-}
+/* ########## SKILLS SECTION START ########## */
 
 .skills {
-    padding: 50px 10%;
+    padding: 80px 10%;
     background-color: #111827; 
     color: white;
     text-align: center;
 }
 
 .skills h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 40px;
+    color: white;
 }
 
 .skill-category h3 {
-    font-size: 1.5rem;
-    margin: 30px 0;
+    font-size: 1.8rem;
+    margin: 40px 0 20px;
     color: #9ca3af;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-
+/* Flex Grid for Technical Skills */
 .skill-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .skill-card {
     background: #1f2937;
-    padding: 15px 20px;
-    border-radius: 10px;
-    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px; /* Desktop default */
     text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 .skill-card:hover {
-    transform: scale(1.3); 
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); 
-    z-index: 1; 
+    transform: translateY(-10px); /* scale(1.3) er bodole translateY beshi professional */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    border-color: #00AEEF;
 }
 
 .skill-info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-weight: bold;
 }
 
+.skill-info span:last-child {
+    color: #00AEEF; /* Percentage color */
+}
+
+/* Progress Bar Styling */
 .progress-bar {
     background: #374151;
-    height: 8px;
-    border-radius: 5px;
+    height: 10px;
+    border-radius: 10px;
     overflow: hidden;
 }
 
 .progress {
     height: 100%;
-    border-radius: 5px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #00AEEF, #007bff); /* Blue gradient */
 }
 
+/* Soft Skills Styling */
 .soft-skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .soft-skills-container span {
-    background: #374151;
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    border: 1px solid #4b5563;
-    transition: 0.3s;
+    background: #1f2937;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1rem;
+    border: 1px solid #374151;
+    transition: 0.3s ease;
+    cursor: default;
 }
 
 .soft-skills-container span:hover {
-    background: #007bff;
-    color: white;
+    background: #00AEEF;
+    color: black;
+    font-weight: bold;
     transform: translateY(-5px);
+    border-color: #00AEEF;
 }
-/* Skills section ends  */
+
+/* --- Responsive Breakpoints --- */
+
+/* 1. Large Screen (1440px) */
+@media (max-width: 1440px) {
+    .skills { padding: 80px 8%; }
+}
+
+/* 2. Small Laptops (1024px) */
+@media (max-width: 1024px) {
+    .skills { padding: 60px 5%; }
+    .skill-card { width: 280px; }
+    .skills h1 { font-size: 2.5rem; }
+}
+
+/* 3. Tablets (768px) */
+@media (max-width: 768px) {
+    .skill-card { 
+        width: 45%; 
+    }
+    .skill-category h3 { font-size: 1.5rem; }
+}
+
+/* 4. Mobile Devices (420px) */
+@media (max-width: 420px) {
+    .skills { padding: 50px 15px; }
+    
+    .skill-card { 
+        width: 100%; 
+        padding: 15px;
+    }
+
+    .skills h1 { font-size: 2rem; }
+    
+    .soft-skills-container span {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+    
+    .skill-card:hover {
+        transform: translateY(-5px); 
+    }
+}
 
 
-/* Activities section starts */
 
-.activities{
+/* ########## ACTIVITIES SECTION START ########## */
+
+.activities {
     background-color: hsl(216, 100%, 4%);
-    padding-top: 50px;
+    padding: 80px 0;
     text-align: center;
-    padding-bottom: 100px;
+    overflow: hidden;
+    width: 100%;
 }
 
-.slider{
-    width:1200px;   
-    overflow:hidden;
-    margin:50px auto;
+.activities h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
 }
 
-.track{
-    display:flex;
-    gap:30px;
-    width:max-content;   
-    animation: slide 22s infinite;
+.slider {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+    /* justify-content: center bad deya hoyeche jate 1st card kete na jay */
 }
 
-.card{
-    width:3.9%;
-    height:auto;
+.track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    padding-left: 50px; /* Shurute ektu gap jate prothom card-ta ekdom bame lege na thake */
+    animation: slide 25s infinite ease-in-out;
+}
+
+/* Card Style */
+.card {
+    width: 300px; /* Fixed width for consistency */
     background: #090621;
-    color:white;
-    font-size:20px;
-    border-radius:10px;
-    flex-shrink:0;
+    color: white;
+    border-radius: 12px;
+    flex-shrink: 0;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
 }
 
-.card img{
+/* Image Container - Square Shape */
+.cardimage {
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
 }
-.card .cardtext{
+
+.cardimage img {
     width: 100%;
-    height: 140px;
-    padding: 10px 10px;
+    height: 100%;
+    object-fit: cover;
 }
-.cardtext h3{
-    color: #7b2cbf;
+
+.card .cardtext {
+    padding: 20px 15px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.cardtext h5{
+
+.cardtext h3 {
+    color: #00AEEF;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.cardtext h5 {
+    color: #9ca3af;
+    font-size: 0.85rem;
     margin-bottom: 15px;
 }
-.cardtext span{
-    padding: 5px 10px;
-    background-color: white;
-    border-radius: 15px;
-    font-size: 12px;
-    color: #000814;
+
+.cardtext span {
+    align-self: center;
+    padding: 5px 12px;
+    background-color: #00AEEF;
+    border-radius: 20px;
+    font-size: 10px;
+    color: #000;
+    font-weight: bold;
 }
 
+/* Animation: Card(300) + Gap(30) = 330px per step */
 @keyframes slide {
-
-    0%   { transform: translateX(0); }
-    15%  { transform: translateX(0); }
-
-    20%  { transform: translateX(-350px); }
-    35%  { transform: translateX(-350px); }
-
-    40%  { transform: translateX(-700px); }
-    55%  { transform: translateX(-700px); }
-
-    60%  { transform: translateX(-1100px); }
-    75%  { transform: translateX(-1100px); }
-
-    80%  { transform: translateX(-1400px); }
-    95%  { transform: translateX(-1400px); }
-
-    100% { transform: translateX(0); }
+    0%, 15%   { transform: translateX(0); }
+    20%, 35%  { transform: translateX(-330px); }
+    40%, 55%  { transform: translateX(-660px); }
+    60%, 75%  { transform: translateX(-990px); }
+    80%, 95%  { transform: translateX(-1320px); }
+    100%      { transform: translateX(0); }
 }
-/* Actitivities section ends */
+
+/* --- Responsive Adjustments --- */
+
+@media (max-width: 1024px) {
+    .card { width: 280px; }
+    /* Animation adjust for 280 + 30 = 310px step */
+    @keyframes slide {
+        0%, 15%   { transform: translateX(0); }
+        20%, 35%  { transform: translateX(-310px); }
+        40%, 55%  { transform: translateX(-620px); }
+        60%, 75%  { transform: translateX(-930px); }
+        80%, 95%  { transform: translateX(-1240px); }
+        100%      { transform: translateX(0); }
+    }
+}
+
+@media (max-width: 420px) {
+    .track {
+        padding-left: 20px; /* Mobile-e padding komano holo */
+    }
+    .card { width: 260px; }
+    /* Step: 260 + 30 = 290px */
+    @keyframes slide {
+        0%, 15%   { transform: translateX(0); }
+        20%, 35%  { transform: translateX(-290px); }
+        40%, 55%  { transform: translateX(-580px); }
+        60%, 75%  { transform: translateX(-870px); }
+        80%, 95%  { transform: translateX(-1160px); }
+        100%      { transform: translateX(0); }
+    }
+}
+
+/* ########## ACTIVITIES SECTION END ########## */
 
 
-/* Awards Section Starts */
-.awards{
+
+/* ########## AWARDS SECTION START ########## */
+
+.awards {
     background-color: #222;
-    padding: 50px 250px;
+    width: 100%;
+    padding: 80px 10%; /* Percentage use kora ta safe */
     text-align: center;
-    height: 100vh;
+    min-height: 100vh; /* Fixed height-er bodole min-height */
+    height: auto;
     background-image: url("../Images/Awards/backgroundimageforawardssection.jpg");
     background-size: cover;
     background-blend-mode: overlay;
-}
-.awards h1{
-    margin-bottom: 50px;
+    background-attachment: fixed; /* Parallax effect thakle sundor lage */
 }
 
-.imagegallery{
+.awards h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.imagegallery {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 200px);
-    gap: 8px;
+    grid-auto-rows: 200px; /* Row height automatic manage hobe */
+    gap: 15px;
 }
-.box{
+
+.box {
     background-size: cover;
     background-position: top center;
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     justify-content: center;
-    background-color: #222;
+    background-color: rgba(34, 34, 34, 0.7);
     background-blend-mode: overlay;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease;
     border: 2px solid white;
-    border-radius: 0px;
-    box-shadow: 0px 0px 5px 1px darkgray;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
-.box:hover{
+
+.box h3 {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+}
+
+.box:hover {
     background-color: transparent;
-    background-position: center center;
-    border: 2px solid white;
-    border-radius: 10px;
-    h3{
-        background-color: #0080ae;
-        transition: all 0.5s ease-in-out;
-        border-radius: 5px 5px 0 0;
-        padding: 5px 10px;
+    transform: translateY(-5px);
+    border-color: #00AEEF;
+}
+
+.box:hover h3 {
+    background-color: #00AEEF;
+}
+
+/* Grid Spanning Classes */
+.col2 { grid-column: span 2; }
+.row2 { grid-row: span 2; }
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* 1. Ultra Wide (2560px) */
+@media (min-width: 1441px) {
+    .awards { padding: 100px 20%; }
+    .imagegallery { grid-auto-rows: 300px; gap: 25px; }
+    .awards h1 { font-size: 4rem; }
+}
+
+/* 2. Standard Desktop & Laptop (1440px - 1024px) */
+@media (max-width: 1440px) {
+    .awards { padding: 80px 100px; }
+}
+
+@media (max-width: 1024px) {
+    .awards { padding: 60px 50px; }
+    .imagegallery { 
+        grid-template-columns: repeat(3, 1fr); /* 3 column layout */
     }
 }
-.col2{
-    grid-column: span 2;
+
+/* 3. Tablets (768px) */
+@media (max-width: 768px) {
+    .awards { padding: 50px 30px; }
+    .imagegallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 column layout */
+        grid-auto-rows: 180px;
+    }
+    .awards h1 { font-size: 2.5rem; }
 }
-.col3{
-    grid-column: span 3;
+
+/* 4. Mobile (420px) */
+@media (max-width: 420px) {
+    .awards { padding: 40px 15px; }
+    .awards h1 { font-size: 2rem; margin-bottom: 30px; }
+    
+    .imagegallery {
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-auto-rows: 250px;
+    }
+
+    /* Mobile-e span gulo reset korte hobe jeno layout kete na jay */
+    .col2, .col3, .col6 { grid-column: span 1; }
+    .row2, .row3, .row6 { grid-row: span 1; }
+    
+    .box h3 { font-size: 0.9rem; }
 }
-.col6{
-    grid-column: span 6;
-}
-.row2{
-    grid-row: span 2;
-}
-.row3{
-    grid-row: span 3;
-}
-.row6{
-    grid-row: span 6;
-}
-/* Awards section ends */
+
+/* ########## AWARDS SECTION END ########## */
 
 
 
-/* Certifications section starts */
-.certifications{
+/* ########## CERTIFICATIONS SECTION START ########## */
+
+.certifications {
     background-image: url("../Images/Certificates/w14.jpg");
     background-size: cover;
     background-color: #22222292;
     background-blend-mode: overlay;
-    height: 145vh;
-    padding: 50px 100px;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    padding: 80px 5%;
     text-align: center;
 }
 
-.certifications h1{
-    margin-bottom: 50px;
-}
-
-.showcase{
+.showcase {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4, 1fr); 
     width: 100%;
-    gap: 10px 5px;
-}
-.certificate{
-    background-color: #131a2a;
-    padding: 8px 5px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 8px 1px inset rgba(18, 92, 124, 0.51);
-}
-.certificate:hover{
-    img{
-        transform: scale(1.8);
-        transition-duration: 1s;
-    }
-    
-}
-.certificate img{
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
+    max-width: 1800px;
+    margin: 0 auto;
+    gap: 30px 20px;
 }
 
-.certificate h3{
+.certificate {
+    background-color: #131a2a;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px rgba(18, 92, 124, 0.4);
+    transition: all 0.4s ease;
+}
+
+.certificate img {
+    width: 100%;
+    /* 4:3 Ratio Fixed rakhar jonno */
+    aspect-ratio: 4 / 3; 
+    object-fit: cover; /* Kalo jayga asbe na, ratio thik thakbe */
+    border-radius: 5px;
+    transition: transform 0.8s ease;
+}
+
+.certificate:hover {
+    transform: translateY(-10px);
+}
+
+.certificate:hover img {
+    transform: scale(1.05); /* Ektu scaling jate bhalo lage */
+}
+
+.certificate h3 {
     color: #007bff;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 1.1rem;
     text-transform: uppercase;
 }
-.certificate p{
+
+.certificate p {
     color: grey;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
     text-transform: capitalize;
 }
 
-/* Certifications section ends */
+/* --- RESPONSIVE BREAKPOINTS --- */
 
-
-/* Contact section starts */
-.contactme{
-    height: 100vh;
-    background-color: #0b122b;
-    background-image: url("../Images/Footer/1575.jpg");
-    background-blend-mode: overlay;
-    padding: 50px 100px;
-    display: flex;
-    gap: 30px;
+/* 1. Ultra Wide (2560px) */
+@media (min-width: 1441px) {
+    .showcase { 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 40px; 
+    }
+    .certifications h1 { font-size: 4.5rem; }
 }
 
-.contactdetails{
+/* 2. Standard Laptop (1440px - 1024px) */
+@media (max-width: 1440px) {
+    .showcase { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* 3. Tablets (768px) */
+@media (max-width: 768px) {
+    .showcase { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* 4. Mobile (420px) */
+@media (max-width: 420px) {
+    .showcase { grid-template-columns: 1fr; } 
+    .certifications { padding: 50px 20px; }
+}
+
+/* ########## CERTIFICATIONS SECTION END ########## */
+
+
+
+/* ########## CONTACT SECTION START ########## */
+
+.contactme {
+    min-height: 100vh; /* Fixed height bad */
+    height: auto;
+    background-color: #0b122b;
+    background-image: url("../Images/Footer/1575.jpg");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    padding: 80px 10%; /* Desktop padding percentage-e */
+    display: flex;
+    gap: 30px;
+    align-items: flex-start; /* Jeno boro-choto holeo upore align thake */
+}
+
+.contactdetails, .contactform {
     background-color: #000814;
     width: 50%;
     height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
 }
 
-.contactdetails h2{
+.contactdetails h2, .contactform h2 {
     text-align: center;
     padding: 20px 0;
     background-color: #001d3d;
     color: #ff7b00;
+    font-size: 1.8rem;
 }
 
-.contactbox{
+.contactbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.fa-solid{
+.boxdetails {
+    text-align: center;
+    padding: 40px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.fa-solid {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
     color: #00AEEF;
 }
 
-.boxdetails{
-    text-align: center;
-    padding: 50px 10px;
+.boxdetails h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem; /* Ektu standardize kora holo */
+    color: white;
 }
 
-
-.boxdetails h3{
-    margin-bottom: 20px;
-    font-size: 30px;
-}
-
-.boxdetails p{
+.boxdetails p {
     color: lightgrey;
     line-height: 1.4rem;
+    word-break: break-word; /* Long email/text jeno na bhange */
 }
 
-.contactform{
-    background-color: #000814;
-    width: 50%;
-}
-
-.contactform h2{
-    text-align: center;
-    padding: 20px 0;
-    background-color: #001d3d;
-    color: #ff7b00;
-}
-
-.contactform input{
+/* Form Styles */
+.contactform input, .contactform textarea {
     background-color: #001D3D;
-    width: 94%;
-    margin: 15px 15px 10px 15px;
-    font-size: 20px;
-    padding: 16px 16px;
-    border-color: black;
-    border-radius: 10px;
+    width: calc(100% - 40px); /* Padding/Margin adjust korar safe way */
+    margin: 15px 20px;
+    font-size: 18px;
+    padding: 15px;
+    border: 1px solid #003566;
+    border-radius: 8px;
+    color: white;
+    outline: none;
 }
 
-.contactform textarea{
-    background-color: #001d3d;
-    width: 94%;
-    margin: 20px;
-    font-size: 20px;
-    padding: 16px 16px;
-    border-color: black;
-    border-radius: 10px;
+.contactform textarea {
+    height: 150px;
+    resize: none;
 }
 
-.contactform button{
+.contactform button {
     background-color: #007bff;
     color: #eae6e5;
     font-weight: bold;
-    width: 94%;
+    width: calc(100% - 40px);
     margin: 20px;
     font-size: 20px;
-    padding: 16px 16px;
-    border: 5px transparent solid;
+    padding: 16px;
+    border: 3px transparent solid;
     border-radius: 10px;
-    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    transition: all 0.4s ease;
 }
 
-.contactform button:hover{
+.contactform button:hover {
     background-color: transparent;
-    border: 5px solid #001d3d;
-    
+    border: 3px solid #007bff;
+    color: #007bff;
 }
-/* Contact section ends */
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* 1. Ultra Wide (2560px) */
+@media (min-width: 1441px) {
+    .contactme { padding: 100px 15%; }
+    .contactdetails h2, .contactform h2 { font-size: 2.5rem; }
+    .boxdetails h3 { font-size: 2rem; }
+}
+
+/* 2. Tablets (1024px) */
+@media (max-width: 1024px) {
+    .contactme { padding: 60px 40px; }
+    .boxdetails h3 { font-size: 1.2rem; }
+    .fa-solid { font-size: 25px; }
+}
+
+/* 3. Small Tablets & Mobile Stack (768px) */
+@media (max-width: 768px) {
+    .contactme {
+        flex-direction: column; /* Upore niche chole ashbe */
+        padding: 50px 20px;
+    }
+    .contactdetails, .contactform {
+        width: 100%; /* Full width mobile-e */
+    }
+}
+
+/* 4. Small Mobile (420px) */
+@media (max-width: 420px) {
+    .contactbox {
+        grid-template-columns: 1fr; /* Details gulo niche niche thakbe */
+    }
+    .boxdetails {
+        padding: 30px 10px;
+    }
+    .contactform input, .contactform textarea {
+        margin: 10px 15px;
+        width: calc(100% - 30px);
+        font-size: 16px;
+    }
+    .contactform button {
+        margin: 15px;
+        width: calc(100% - 30px);
+    }
+}
+
+/* ########## CONTACT SECTION END ########## */
