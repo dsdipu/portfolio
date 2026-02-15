@@ -11,7 +11,7 @@ div {
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* FIXED: correct box model */
+    box-sizing: border-box; 
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     text-decoration: none;
@@ -97,7 +97,7 @@ div {
 @media (max-width: 768px) {
     .navbar { 
         padding: 0 20px; 
-        height: 80px; /* Ektu height barano holo jate space pay */
+        height: 80px; 
     }
     .navlogo img { width: 50px; }
     .navmenu a { margin: 0 8px; font-size: 12px; }
@@ -108,7 +108,7 @@ div {
 @media (max-width: 425px) {
     .navbar {
         height: auto;
-        flex-direction: column; /* Niche niche layout */
+        flex-direction: column;
         padding: 15px 10px;
         gap: 12px;
     }
@@ -120,7 +120,7 @@ div {
     }
 
     .navmenu {
-        flex-wrap: wrap; /* Item beshi hole auto line break korbe */
+        flex-wrap: wrap; 
         gap: 8px;
     }
 
@@ -132,7 +132,7 @@ div {
 
     .navcontact a {
         display: block;
-        width: 90%; /* Center-e thakar jonno */
+        width: 90%; 
         margin: 0 auto;
     }
 }
@@ -147,7 +147,7 @@ div {
     background-color: black;
     display: flex;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 200px;
     overflow: hidden;
 }
 
@@ -168,7 +168,7 @@ div {
 .herotag { font-size: 1.4rem; font-weight: bold; line-height: 3rem; color: white; }
 .herotag span { color: #00AEEF; margin: 0 1rem; }
 
-/* Buttons Base */
+
 .herocontent .btn1, .herocontent .btn2 {
     display: inline-block;
     font-size: 1.1rem;
@@ -201,12 +201,12 @@ div {
 /* 3. Tablets Portrait (768px and below) */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column; /* Content niche niche chole ashbe */
+        flex-direction: column; 
         justify-content: center;
         text-align: center;
         height: auto;
         min-height: 100vh;
-        padding: 100px 30px 50px 30px; /* Navbar er space rakha hoyeche */
+        padding: 100px 30px 50px 30px; 
     }
 
     .heroimage, .herocontent { width: 100%; }
@@ -216,7 +216,7 @@ div {
     .herocontent h1 { font-size: 2.8rem; line-height: 1.2; }
     .herotag { font-size: 1.2rem; line-height: 2.5rem; }
     
-    .herocontent .btn2 { margin-left: 1rem; } /* Mobile er age margin adjust */
+    .herocontent .btn2 { margin-left: 1rem; } 
 }
 
 /* 4. Mobile Devices (420px and below) */
@@ -234,10 +234,10 @@ div {
     .herocontent h1 { font-size: 2.2rem; }
     
     .herotag { font-size: 1rem; line-height: 1.8rem; }
-    .herotag span { display: block; margin: 5px 0; } /* Text kete na jaoar jonno */
+    .herotag span { display: block; margin: 5px 0; } 
 
     .herocontent .btn1, .herocontent .btn2 {
-        display: block; /* Buttons ektar niche arekta */
+        display: block; 
         width: 100%;
         margin-left: 0;
         margin-top: 15px;
@@ -255,18 +255,18 @@ div {
     align-items: center;
     background-color: black;
     padding: 0 100px;
-    min-height: 80vh; /* Content er upor base kore height nibe */
+    min-height: 80vh; 
 }
 
 .abouttext {
-    width: 40%; /* 30% theke ektu baralam jate text guchano thake */
+    width: 40%; 
 }
 
 .aboutimage {
     width: 60%;
-    height: 600px; /* Standard desktop height */
+    height: 600px; 
     background-image: url("../Images/AboutSection/web\ cartoon.png");
-    background-size: contain; /* Image jeno kete na jay tai contain use kora best */
+    background-size: contain; 
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -276,7 +276,7 @@ div {
     font-weight: 300;
     font-size: 5rem;
     color: #00AEEF;
-    line-height: 4rem; /* 2rem ekhane ektu gajagaji lagte pare tai baralam */
+    line-height: 4rem; 
 }
 
 .abouttext h2 {
@@ -327,7 +327,7 @@ div {
 /* 3. Tablets Portrait (768px and below) */
 @media (max-width: 768px) {
     .about {
-        flex-direction: column-reverse; /* Text upore, Image niche */
+        flex-direction: column-reverse; 
         padding: 60px 30px;
         text-align: center;
     }
@@ -335,7 +335,7 @@ div {
     .abouttext, .aboutimage { width: 100%; }
 
     .aboutimage {
-        height: 400px; /* Choto screen-e image height komano holo */
+        height: 400px; 
         margin-bottom: 30px;
     }
 
@@ -350,7 +350,7 @@ div {
     }
 
     .aboutimage {
-        height: 300px; /* Mobile screen-er jonno ektu choto image */
+        height: 300px; 
     }
 
     .abouttext h1 { font-size: 2.5rem; line-height: 2.2rem; }
@@ -373,7 +373,7 @@ div {
 .education {
     height: fit-content;
     background-color: black;
-    display: block; /* 'felx' spelling thik kora hoyeche ar container e block thaka safe */
+    display: block; 
     padding: 50px 100px 150px 100px;
 }
 
@@ -381,19 +381,19 @@ div {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 3rem;
-    color: white; /* Universal style onujayi */
+    color: white; 
 }
 
 .educationdetails {
     display: flex;
-    align-items: stretch; /* Sob card jeno soman lomba thake */
+    align-items: stretch; 
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Jayga na hole card auto niche jabe */
+    flex-wrap: wrap; 
 }
 
 .educationbox {
-    width: 22%; /* Gap soho 4-ta card er jonno adjust kora */
+    width: 22%;  
     text-align: center;
     padding: 40px 20px;
     border-radius: 10px;
@@ -403,7 +403,7 @@ div {
 }
 
 .educationbox:hover {
-    transform: translateY(-10px); /* Box ektu upore uthbe */
+    transform: translateY(-10px);
 }
 
 .educationbox:hover .fa-solid {
@@ -441,7 +441,7 @@ div {
 @media (max-width: 1024px) {
     .education { padding: 50px 40px; }
     .educationbox { 
-        width: 45%; /* Ekhane 2-ta kore card pasapasi thakbe */
+        width: 45%; 
     }
     .education h1 { font-size: 2.5rem; }
 }
@@ -451,7 +451,7 @@ div {
     .education { padding: 40px 30px; }
     .educationdetails { gap: 20px; }
     .educationbox { 
-        width: 47%; /* Tablet-e o 2-ta kore thakbe kintu padding ektu kom hobe */
+        width: 47%; 
         padding: 30px 15px;
     }
     .education h1 { font-size: 2.2rem; margin-bottom: 2rem; }
@@ -461,7 +461,7 @@ div {
 @media (max-width: 420px) {
     .education { padding: 40px 15px; }
     .educationbox { 
-        width: 100%; /* Mobile-e 1-ta kore card full width nibe */
+        width: 100%; 
         padding: 30px 20px;
     }
     .education h1 { font-size: 1.8rem; }
@@ -490,13 +490,13 @@ div {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Jayga na hole niche jabe */
+    flex-wrap: wrap; 
 }
 
 /* Common Card Style */
 .project-card {
     background-color: #000814;
-    width: 30%; /* Standard Desktop width */
+    width: 30%; 
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px -2px 3px #00AEEF;
@@ -583,18 +583,18 @@ div {
 
 @media (max-width: 1024px) {
     .projects { padding: 50px 40px; }
-    .project-card { width: 45%; } /* Tablet-e 2-ta kore */
+    .project-card { width: 45%; } 
     .projects h1 { font-size: 2.5rem; }
 }
 
 @media (max-width: 768px) {
     .projects { padding: 50px 20px; }
-    .project-card { width: 80%; } /* Portrait Tablet-e 1-ta boro card */
+    .project-card { width: 80%; } 
 }
 
 @media (max-width: 420px) {
     .projects { padding: 40px 15px; }
-    .project-card { width: 100%; } /* Mobile-e full width */
+    .project-card { width: 100%; } 
     .projects h1 { font-size: 2rem; margin-bottom: 2.5rem; }
     .project-info h2 { font-size: 1.2rem; }
 }
@@ -635,14 +635,14 @@ div {
     background: #1f2937;
     padding: 20px;
     border-radius: 12px;
-    width: 300px; /* Desktop default */
+    width: 300px; 
     text-align: left;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .skill-card:hover {
-    transform: translateY(-10px); /* scale(1.3) er bodole translateY beshi professional */
+    transform: translateY(-10px); 
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
     border-color: #00AEEF;
 }
@@ -655,7 +655,7 @@ div {
 }
 
 .skill-info span:last-child {
-    color: #00AEEF; /* Percentage color */
+    color: #00AEEF; 
 }
 
 /* Progress Bar Styling */
@@ -669,7 +669,7 @@ div {
 .progress {
     height: 100%;
     border-radius: 10px;
-    background: linear-gradient(90deg, #00AEEF, #007bff); /* Blue gradient */
+    background: linear-gradient(90deg, #00AEEF, #007bff);
 }
 
 /* Soft Skills Styling */
@@ -764,20 +764,19 @@ div {
     width: 100%;
     overflow: hidden;
     padding: 40px 0;
-    /* justify-content: center bad deya hoyeche jate 1st card kete na jay */
 }
 
 .track {
     display: flex;
     gap: 30px;
     width: max-content;
-    padding-left: 50px; /* Shurute ektu gap jate prothom card-ta ekdom bame lege na thake */
+    padding-left: 50px; 
     animation: slide 25s infinite ease-in-out;
 }
 
 /* Card Style */
 .card {
-    width: 300px; /* Fixed width for consistency */
+    width: 300px; 
     background: #090621;
     color: white;
     border-radius: 12px;
@@ -846,7 +845,6 @@ div {
 
 @media (max-width: 1024px) {
     .card { width: 280px; }
-    /* Animation adjust for 280 + 30 = 310px step */
     @keyframes slide {
         0%, 15%   { transform: translateX(0); }
         20%, 35%  { transform: translateX(-310px); }
@@ -859,10 +857,9 @@ div {
 
 @media (max-width: 420px) {
     .track {
-        padding-left: 20px; /* Mobile-e padding komano holo */
+        padding-left: 20px; 
     }
     .card { width: 260px; }
-    /* Step: 260 + 30 = 290px */
     @keyframes slide {
         0%, 15%   { transform: translateX(0); }
         20%, 35%  { transform: translateX(-290px); }
@@ -882,14 +879,14 @@ div {
 .awards {
     background-color: #222;
     width: 100%;
-    padding: 80px 10%; /* Percentage use kora ta safe */
+    padding: 80px 10%; 
     text-align: center;
-    min-height: 100vh; /* Fixed height-er bodole min-height */
+    min-height: 100vh; 
     height: auto;
     background-image: url("../Images/Awards/backgroundimageforawardssection.jpg");
     background-size: cover;
     background-blend-mode: overlay;
-    background-attachment: fixed; /* Parallax effect thakle sundor lage */
+    background-attachment: fixed; 
 }
 
 .awards h1 {
@@ -902,7 +899,7 @@ div {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 200px; /* Row height automatic manage hobe */
+    grid-auto-rows: 100px; 
     gap: 15px;
 }
 
@@ -948,7 +945,7 @@ div {
 /* 1. Ultra Wide (2560px) */
 @media (min-width: 1441px) {
     .awards { padding: 100px 20%; }
-    .imagegallery { grid-auto-rows: 300px; gap: 25px; }
+    .imagegallery { grid-auto-rows: 150px; gap: 25px; }
     .awards h1 { font-size: 4rem; }
 }
 
@@ -960,7 +957,7 @@ div {
 @media (max-width: 1024px) {
     .awards { padding: 60px 50px; }
     .imagegallery { 
-        grid-template-columns: repeat(3, 1fr); /* 3 column layout */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
 
@@ -968,7 +965,7 @@ div {
 @media (max-width: 768px) {
     .awards { padding: 50px 30px; }
     .imagegallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 column layout */
+        grid-template-columns: repeat(2, 1fr); 
         grid-auto-rows: 180px;
     }
     .awards h1 { font-size: 2.5rem; }
@@ -980,7 +977,7 @@ div {
     .awards h1 { font-size: 2rem; margin-bottom: 30px; }
     
     .imagegallery {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr; 
         grid-auto-rows: 250px;
     }
 
@@ -1029,9 +1026,8 @@ div {
 
 .certificate img {
     width: 100%;
-    /* 4:3 Ratio Fixed rakhar jonno */
     aspect-ratio: 4 / 3; 
-    object-fit: cover; /* Kalo jayga asbe na, ratio thik thakbe */
+    object-fit: cover; 
     border-radius: 5px;
     transition: transform 0.8s ease;
 }
@@ -1041,7 +1037,7 @@ div {
 }
 
 .certificate:hover img {
-    transform: scale(1.05); /* Ektu scaling jate bhalo lage */
+    transform: scale(1.05); 
 }
 
 .certificate h3 {
@@ -1099,10 +1095,10 @@ div {
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
-    padding: 80px 10%; /* Desktop padding percentage-e */
+    padding: 80px 10%; 
     display: flex;
     gap: 30px;
-    align-items: flex-start; /* Jeno boro-choto holeo upore align thake */
+    align-items: flex-start; 
 }
 
 .contactdetails, .contactform {
@@ -1119,12 +1115,13 @@ div {
     padding: 20px 0;
     background-color: #001d3d;
     color: #ff7b00;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .contactbox {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding: 20px 10px;
 }
 
 .boxdetails {
@@ -1142,20 +1139,20 @@ div {
 
 .boxdetails h3 {
     margin-bottom: 15px;
-    font-size: 1.5rem; /* Ektu standardize kora holo */
+    font-size: 1.5rem; 
     color: white;
 }
 
 .boxdetails p {
     color: lightgrey;
     line-height: 1.4rem;
-    word-break: break-word; /* Long email/text jeno na bhange */
+    word-break: break-word; 
 }
 
 /* Form Styles */
 .contactform input, .contactform textarea {
     background-color: #001D3D;
-    width: calc(100% - 40px); /* Padding/Margin adjust korar safe way */
+    width: calc(100% - 40px); 
     margin: 15px 20px;
     font-size: 18px;
     padding: 15px;
@@ -1209,18 +1206,18 @@ div {
 /* 3. Small Tablets & Mobile Stack (768px) */
 @media (max-width: 768px) {
     .contactme {
-        flex-direction: column; /* Upore niche chole ashbe */
+        flex-direction: column; 
         padding: 50px 20px;
     }
     .contactdetails, .contactform {
-        width: 100%; /* Full width mobile-e */
+        width: 100%; 
     }
 }
 
 /* 4. Small Mobile (420px) */
 @media (max-width: 420px) {
     .contactbox {
-        grid-template-columns: 1fr; /* Details gulo niche niche thakbe */
+        grid-template-columns: 1fr;
     }
     .boxdetails {
         padding: 30px 10px;
