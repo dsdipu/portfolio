@@ -3,7 +3,7 @@
 A modern, responsive personal portfolio website built using pure HTML5 and CSS3.  
 This project represents my academic background, technical skills, leadership experience, and project work in a structured and professional format.
 
-🔗 **Live Website:** [View](https://www.dsdipu.github.io/portfolio)  
+🔗 **Live Website:** [View](https://dsdipu.github.io/portfolio/)
 📂 **Repository:** [View](https://github.com/dsdipu/portfolio)  
 
 ---
