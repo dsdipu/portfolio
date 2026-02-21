@@ -114,8 +114,8 @@ It reflects discipline, clarity, and clean engineering practice.
 
 📬 Contact
 
-📧 Email: mr.sarkar9979@gmail.com
-🔗 LinkedIn: linkedin.com/in/dsdipu
-🌐 Portfolio: https://www.dsdipu.github.io/portfolio
+📧 [Email](mr.sarkar9979@gmail.com)
+🔗 [LinkedIn](https://linkedin.com/in/dsdipu)
+🌐 [Portfolio](https://dsdipu.github.io/portfolio/)
 
 © 2026 Dipankar Sarkar
