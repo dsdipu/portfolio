@@ -265,7 +265,7 @@ div {
 .aboutimage {
     width: 60%;
     height: 600px; 
-    background-image: url("../Images/AboutSection/web\ cartoon.png");
+    background-image: url("../Images/AboutSection/web-cartoon.webp");
     background-size: contain; 
     background-position: center;
     background-repeat: no-repeat;
@@ -518,8 +518,9 @@ div {
     background-position: center top;
 }
 
-.img1 { background-image: url("../Images/Projects/Bangla\ bhojon.png"); }
-.img2 { background-image: url("../Images/Projects/portfolio.png"); }
+.img1 { background-image: url("../Images/Projects/Bangla-bhojon.webp"); }
+.img2 { background-image: url("../Images/Projects/portfolio.webp"); }
+.img3 { background-image: url("../Images/Projects/Khuda-lagche.webp"); }
 
 /* Info Padding */
 .project-info {
@@ -883,7 +884,7 @@ div {
     text-align: center;
     min-height: 100vh; 
     height: auto;
-    background-image: url("../Images/Awards/backgroundimageforawardssection.jpg");
+    background-image: url("../Images/Awards/backgroundimageforawardssection.webp");
     background-size: cover;
     background-blend-mode: overlay;
     background-attachment: fixed; 
@@ -995,7 +996,7 @@ div {
 /* ########## CERTIFICATIONS SECTION START ########## */
 
 .certifications {
-    background-image: url("../Images/Certificates/w14.jpg");
+    background-image: url("../Images/Certificates/w14.webp");
     background-size: cover;
     background-color: #22222292;
     background-blend-mode: overlay;
@@ -1239,7 +1240,7 @@ div {
 
 /* ########## FOOTER SECTION START */
 .footer{
-    background-image: url("../Images/Footer/footer-image.jpg");
+    background-image: url("../Images/Footer/footer-image.webp");
     background-color: #0b122be2;
     background-blend-mode: overlay;
     height: fit-content;
